@@ -30,7 +30,7 @@ class AppColors {
       ],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
-      stops: [
+      stops: const [
         0.0, 0.29, 0.54, 1.0
       ]
   );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tmdb_mobile/utils/widgets/button/accent_button_widget.dart';
-import 'package:tmdb_mobile/utils/widgets/button/main_button_widget.dart';
 import '../../../utils/theme/app_colors.dart';
+import '../../../utils/widgets/button/white_button_widget.dart';
 import 'login_controller.dart';
 
 class LoginPage extends StatelessWidget {
@@ -13,6 +13,8 @@ class LoginPage extends StatelessWidget {
     return GetBuilder<LoginController>(
       builder: (controller) {
         return Scaffold(
+          backgroundColor: AppColors.blackColor,
+          resizeToAvoidBottomInset: false,
           body: Stack(
             children: [
               Image.asset('assets/images/image_poster.png'),
@@ -58,14 +60,61 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 32,),
-                    AccentButtonWidget(
-                        width: Get.width,
-                        height: 39,
-                        text: 'Daftar',
-                        onPressed: () {}
+                    SizedBox(
+                      width: Get.width,
+                      height: 39,
+                      child: TextFormField(
+                        style: const TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.textSoftGrayColor
+                        ),
+                        decoration: InputDecoration(
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                            hintText: 'Alamat Email',
+                            hintStyle: const TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                                color: AppColors.textSoftGrayColor
+                            ),
+                            fillColor: AppColors.mainColor,
+                            filled: true,
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(999),
+                                borderSide: BorderSide.none
+                            )
+                        ),
+                      ),
                     ),
-                    const SizedBox(height: 16,),
-                    MainButtonWidget(
+                    const SizedBox(height: 24,),
+                    SizedBox(
+                      width: Get.width,
+                      height: 39,
+                      child: TextFormField(
+                        style: const TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.textSoftGrayColor
+                        ),
+                        decoration: InputDecoration(
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                            hintText: 'Password',
+                            hintStyle: const TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                                color: AppColors.textSoftGrayColor
+                            ),
+                            fillColor: AppColors.mainColor,
+                            filled: true,
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(999),
+                                borderSide: BorderSide.none
+                            )
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 24,),
+                    AccentButtonWidget(
                         width: Get.width,
                         height: 39,
                         text: 'Login',
@@ -97,10 +146,11 @@ class LoginPage extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 32,),
-                    MainButtonWidget(
+                    WhiteButtonWidget(
                         width: Get.width,
                         height: 39,
-                        text: 'Masuk sebagai tamu',
+                        text: 'Masuk dengan Google',
+                        asset: 'assets/images/icon_google.svg',
                         onPressed: () {}
                     ),
                     const SizedBox(height: 32,),
@@ -153,7 +203,7 @@ class LoginPage extends StatelessWidget {
                 ),
               )
             ],
-          ),
+          )
         );
       },
     );

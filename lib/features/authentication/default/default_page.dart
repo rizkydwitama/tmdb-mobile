@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tmdb_mobile/routes/page_names.dart';
 import 'package:tmdb_mobile/utils/widgets/button/accent_button_widget.dart';
 import 'package:tmdb_mobile/utils/widgets/button/main_button_widget.dart';
 import '../../../utils/theme/app_colors.dart';
@@ -13,6 +14,7 @@ class DefaultPage extends StatelessWidget {
     return GetBuilder<DefaultController>(
       builder: (controller) {
         return Scaffold(
+          backgroundColor: AppColors.blackColor,
           body: Stack(
             children: [
               Image.asset('assets/images/image_poster.png'),
@@ -62,14 +64,18 @@ class DefaultPage extends StatelessWidget {
                         width: Get.width,
                         height: 39,
                         text: 'Daftar',
-                        onPressed: () {}
+                        onPressed: () {
+                          Get.toNamed(PageNames.REGISTER);
+                        }
                     ),
                     const SizedBox(height: 16,),
                     MainButtonWidget(
                         width: Get.width,
                         height: 39,
                         text: 'Login',
-                        onPressed: () {}
+                        onPressed: () {
+                          Get.toNamed(PageNames.LOGIN);
+                        }
                     ),
                     const SizedBox(height: 43,),
                     Row(
