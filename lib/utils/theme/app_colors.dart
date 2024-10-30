@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 class AppColors {
   static const mainColor = Color(0xFF06122D);
@@ -16,4 +16,22 @@ class AppColors {
   static const textSoftGrayColor = Color(0xFFEEEEEE);
   static const textGrayColor = Color(0xFF71747D);
   static const textDarkGrayColor = Color(0xFF555555);
+
+  // Line Color
+  static const lineWhiteColor = Color(0xFFD9D9D9);
+
+  // Linear Colors
+  static final loginLinearGradientColor = LinearGradient(
+      colors: [
+        blackColor.withOpacity(1.0),
+        blackColor.withOpacity(0.7),
+        blackColor.withOpacity(1.0),
+        blackColor.withOpacity(1.0),
+      ],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      stops: [
+        0.0, 0.29, 0.54, 1.0
+      ]
+  );
 }

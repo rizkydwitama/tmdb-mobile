@@ -7,7 +7,7 @@ class SplashController extends GetxController {
   @override
   void onInit() {
     Timer(const Duration(seconds: 3), () {
-      Get.toNamed(PageNames.LOGIN);
+      Get.toNamed(PageNames.DEFAULT);
     });
     super.onInit();
   }
