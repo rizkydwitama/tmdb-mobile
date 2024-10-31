@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:tmdb_mobile/features/bottom_navbar/bottom_navbar_binding.dart';
+import 'package:tmdb_mobile/features/bottom_navbar/bottom_navbar_page.dart';
 import 'package:tmdb_mobile/features/splash/splash_binding.dart';
 import 'package:tmdb_mobile/features/splash/splash_page.dart';
 import 'package:tmdb_mobile/routes/page_names.dart';
@@ -30,6 +32,11 @@ class PageRoutes {
         name: PageNames.REGISTER,
         binding: RegisterBinding(),
         page: () => const RegisterPage()
+    ),
+    GetPage(
+        name: PageNames.BOTTOM_NAVBAR,
+        binding: BottomNavbarBinding(),
+        page: () => const BottomNavbarPage()
     )
   ];
 }

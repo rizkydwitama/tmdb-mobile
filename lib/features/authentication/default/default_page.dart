@@ -107,7 +107,7 @@ class DefaultPage extends StatelessWidget {
                         width: Get.width,
                         height: 39,
                         text: 'Masuk sebagai tamu',
-                        onPressed: () {}
+                        onPressed: () => Get.toNamed(PageNames.BOTTOM_NAVBAR)
                     ),
                     const SizedBox(height: 32,),
                     RichText(
