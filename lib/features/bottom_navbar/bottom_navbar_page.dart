@@ -30,7 +30,7 @@ class BottomNavbarPage extends StatelessWidget {
           ),
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
-            backgroundColor: AppColors.mainColor,
+            backgroundColor: AppColors.blackColor,
             selectedItemColor: AppColors.textWhiteColor,
             unselectedItemColor: AppColors.textDarkGrayColor,
             showSelectedLabels: true,

@@ -6,14 +6,18 @@ class AccentButtonWidget extends StatelessWidget {
   final double width;
   final double height;
   final String text;
+  Widget? iconLeft;
+  Widget? iconRight;
   final Function()? onPressed;
 
-  const AccentButtonWidget({
+  AccentButtonWidget({
     super.key,
     required this.width,
     required this.height,
     required this.text,
-    required this.onPressed
+    this.iconLeft,
+    this.iconRight,
+    required this.onPressed,
   });
 
   @override
@@ -25,15 +29,23 @@ class AccentButtonWidget extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.accentColor,
+            padding: EdgeInsets.zero
         ),
-        child: Text(
-          text,
-          style: const TextStyle(
-              color: AppColors.textWhiteColor,
-              fontSize: 12,
-              fontWeight: FontWeight.w500
-          ),
-        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            iconLeft ?? const SizedBox(),
+            Text(
+              text,
+              style: const TextStyle(
+                  color: AppColors.textWhiteColor,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500
+              ),
+            ),
+            iconRight ?? const SizedBox(),
+          ],
+        )
       ),
     );
   }

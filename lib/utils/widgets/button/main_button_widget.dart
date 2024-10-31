@@ -25,6 +25,7 @@ class MainButtonWidget extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.mainColor,
+            padding: EdgeInsets.zero,
             side: const BorderSide(
               color: AppColors.accentColor,
             )
