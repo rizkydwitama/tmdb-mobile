@@ -11,7 +11,7 @@ class WatchlistPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<WatchlistController>(
+    return GetX<WatchlistController>(
         builder: (controller) {
           return Scaffold(
             backgroundColor: AppColors.blackColor,
